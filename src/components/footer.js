@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import arrowUp from "../../static/images/arrowup.png"
 
 const Ft = styled.footer`
   padding: 40px 0;
@@ -127,7 +128,17 @@ const Copy = styled.p`
     color: var(--Nord00);
   }
 `
+const ButtonUp = styled(Link)`
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  border: none;
 
+  &:hover {
+    transform: scale(1.1);
+  }
+`
 const Footer = () => (
   <Ft>
     <Container>
@@ -157,16 +168,13 @@ const Footer = () => (
         <Copy>© 2022 - EmilibethV.</Copy>
       </Nav>
 
-      <button
-        style={{
-          position: "absolute",
-          right: "0",
-          top: "0",
-          marginLeft: "15px",
-        }}
-      >
-        arriba
-      </button>
+      <ButtonUp to={"/"}>
+        <img
+          src={arrowUp}
+          alt="Arrow Up"
+          style={{ width: "40px", filter: "grayscale(100%)" }}
+        />
+      </ButtonUp>
     </Container>
   </Ft>
 )

@@ -173,7 +173,7 @@ const GridSkills = styled.div`
   position: relative;
   font-weight: 700;
   line-height: 18px;
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
   margin: 0;
   color: #fff;
@@ -285,10 +285,10 @@ const SobrePage = () => {
 
         <Social />
         <Skills>
-          <Text>
+          <Title>
             <span>👩‍💻</span>Herramientas que utilizo en mi día a día
             <span>👩‍💻</span>
-          </Text>
+          </Title>
 
           <GridSkills>
             <Skill text={"Docs"} icon={docs} />
@@ -308,10 +308,10 @@ const SobrePage = () => {
           </GridSkills>
 
           <Task>
-            <Text>
+            <Title>
               <span>📒</span>Tareas que puedo realizar para ayudarte en tu
               trabajo<span>📒</span>
-            </Text>
+            </Title>
             <ListTask tasks={tasks} />
           </Task>
         </Skills>

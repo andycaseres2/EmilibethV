@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {StaticQuery, graphql} from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     padding: 0;
+    scroll-behavior: smooth;
 
     a {
       color: var(--Nord00);
@@ -238,8 +239,9 @@ const Container = styled.div`
   }
 `
 
-const Layout = ({children}) => (
-    <StaticQuery query={graphql`
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -247,22 +249,24 @@ const Layout = ({children}) => (
           }
         }
       }
-    `} render={data => (
-        <>
-          <React.Fragment>
-            <GlobalStyle />
-            <Header siteTitle={data.site.siteMetadata.title}/>
-            <Main>
-              <Container>{children}</Container>
-            </Main>
-            <Footer/>
-          </React.Fragment>
-        </>
-    )}/>
+    `}
+    render={data => (
+      <>
+        <React.Fragment>
+          <GlobalStyle />
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Main>
+            <Container>{children}</Container>
+          </Main>
+          <Footer />
+        </React.Fragment>
+      </>
+    )}
+  />
 )
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
-export default Layout;
+export default Layout
