@@ -171,7 +171,7 @@ const Header = () => (
     <MenuTop>
       <Container>
         <Nav>
-          <Link to="/" title={"Rychillie"} className={"title"}>
+          <Link to="/" title={"Emilibeth"} className={"title"}>
             <Title>
               E<Spn>milibeth V</Spn>
             </Title>

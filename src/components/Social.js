@@ -114,7 +114,15 @@ const Link = styled.a`
       color: var(--youtuberedlight);
     }
   }
+  &.gmail {
+    background: rgba(52, 168, 83, 0.1);
+    color: var(--gmailgreenlight);
 
+    svg {
+      fill: transparent;
+      color: var(--gmailgreenlight);
+    }
+  }
   &.linkedin {
     background: rgba(0, 119, 181, 0.1);
     color: var(--linkedinbluelight);
@@ -191,6 +199,14 @@ const Link = styled.a`
 
       svg {
         color: var(--youtubereddark);
+      }
+    }
+    &.gmail {
+      background: rgba(52, 168, 83, 0.1);
+      color: #32ac71;
+
+      svg {
+        color: var(--gmailgreendark);
       }
     }
 
@@ -343,6 +359,13 @@ const Link = styled.a`
         color: var(--youtuberedlight);
       }
     }
+    &.gmail {
+      color: var(--gmailgreenlight);
+
+      svg {
+        color: var(--gmailgreenlight);
+      }
+    }
 
     &.linkedin {
       color: var(--linkedinbluelight);
@@ -389,18 +412,18 @@ const Social = () => (
         </Link>
       </ItemSocial>
       {/* Youtube */}
-      {/* <ItemSocial>
+      <ItemSocial>
         <Link
-          href="https://www.youtube.com/rychillie/"
+          href="mailto:emilibethvav@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={"youtube"}
-          alt={"youtube"}
+          className={"gmail"}
+          alt={"Gmail"}
         >
-          <FeatherIcon name="youtube" />
-          <p>/rychillie</p>
+          <FeatherIcon name="mail" />
+          <p>emilibethvav@gmail.com</p>
         </Link>
-      </ItemSocial> */}
+      </ItemSocial>
       {/* Telegram */}
       {/* <ItemSocial>
         <Link
@@ -417,14 +440,14 @@ const Social = () => (
       {/* Github */}
       {/* <ItemSocial>
         <Link
-          href="https://www.github.com/rychillie/"
+          href="https://www.github.com/Emilibeth/"
           target="_blank"
           rel="noopener noreferrer"
           className={"github"}
           alt={"github"}
         >
           <FeatherIcon name="github" alt={"github"} />
-          <p>/rychillie</p>
+          <p>/Emilibeth</p>
         </Link>
       </ItemSocial> */}
       {/* Instagram */}
@@ -456,14 +479,14 @@ const Social = () => (
       {/* Twitch */}
       {/* <ItemSocial>
         <Link
-          href="https://www.twitch.tv/rychillie"
+          href="https://www.twitch.tv/Emilibeth"
           target="_blank"
           rel="noopener noreferrer"
           className={"twitch"}
           alt={"twitch"}
         >
           <FeatherIcon name="twitch" alt={"twitch"} />
-          <p>/rychillie</p>
+          <p>/Emilibeth</p>
         </Link>
       </ItemSocial> */}
     </SocialList>

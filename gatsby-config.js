@@ -1,26 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: 'Rychillie',
+    title: "Rychillie",
     description: `Brazilian Front-End Developer`,
     author: `@rychillie`,
     siteUrl: `https://rychillie.net`,
-    titleTemplate: "%s · Rychillie",
+    titleTemplate: "%s",
     url: "https://rychillie.net",
     image: "/images/profile.png",
     twitterUsername: "@rychillie",
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        lang: 'pt-br'
-      }
+        lang: "pt-br",
+      },
     },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: false
+        displayName: false,
       },
     },
     `gatsby-image`,
@@ -28,40 +28,40 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: "gatsby-remark-relative-images",
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 850,
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: 'static',
+              destinationDir: "static",
             },
           },
           {
             resolve: `gatsby-plugin-netlify-cms-paths`,
             options: {
               // Path to your Netlify CMS config file
-              cmsConfig: `/static/admin/config.yml`
-            }
+              cmsConfig: `/static/admin/config.yml`,
+            },
           },
         ],
       },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/images`,
-        name: 'uploads',
+        name: "uploads",
       },
     },
     {
@@ -87,16 +87,16 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-transition-link`,
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Nunito`,
-          `source sans-serif\:400,700` // you can also specify font weights and styles
+          `source sans-serif\:400,700`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: "swap",
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -109,7 +109,7 @@ module.exports = {
       options: {
         name: `Rychillie`,
         lang: `pt-br`,
-        description: 'Desenvolvedor FrontEnd',
+        description: "Desenvolvedor FrontEnd",
         short_name: `Rychillie`,
         start_url: `/`,
         background_color: `#2E3440`,

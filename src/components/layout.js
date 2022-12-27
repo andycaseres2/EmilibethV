@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --youtuberedlight: #d40000;
     --redprimarydark: #b90000;
     --youtubereddark: #ff9090;
+    --gmailgreenlight: #34A853;
     --linkedinbluelight: #0077B5;
     --linkedinbluedark: #4fc3ff;
     --telegrambluelight: #0088CC;
