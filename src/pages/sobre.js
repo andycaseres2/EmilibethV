@@ -13,6 +13,7 @@ import powerpoint from "../../static/images/skills/powerpoint.png"
 import drive from "../../static/images/skills/drive.png"
 import meet from "../../static/images/skills/meet.png"
 import gmail from "../../static/images/skills/gmail.png"
+import outlook from "../../static/images/skills/outlook.png"
 import calendar from "../../static/images/skills/calendar.png"
 import calendly from "../../static/images/skills/calendly.png"
 import window from "../../static/images/skills/window.png"
@@ -219,7 +220,7 @@ const SobrePage = () => {
           <Grid>
             <Skill text={"Docs"} icon={docs} />
             <Skill text={"Sheet"} icon={sheet} />
-            <Skill text={"Slices"} icon={slides} />
+            <Skill text={"Slides"} icon={slides} />
             <Skill text={"Forms"} icon={forms} />
             <Skill text={"Word"} icon={word} />
             <Skill text={"Excel"} icon={excel} />
@@ -227,6 +228,7 @@ const SobrePage = () => {
             <Skill text={"Drive"} icon={drive} />
             <Skill text={"Meet"} icon={meet} />
             <Skill text={"Gmail"} icon={gmail} />
+            <Skill text={"Outlook"} icon={outlook} />
             <Skill text={"Calendar"} icon={calendar} />
             <Skill text={"Calendly"} icon={calendly} />
             <Skill text={"Windows"} icon={window} />
