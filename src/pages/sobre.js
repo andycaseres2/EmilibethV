@@ -164,7 +164,7 @@ const Skills = styled.div`
   padding-top: 40px;
   padding-bottom: 40px;
 `
-const Grid = styled.div`
+const GridSkills = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   color: var(--Nord03);
@@ -175,6 +175,19 @@ const Grid = styled.div`
   width: 100%;
   margin: 0;
   color: #fff;
+`
+const Task = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: var(--Nord03);
+  position: relative;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  padding-top: 20px;
 `
 
 const SobrePage = () => {
@@ -217,7 +230,7 @@ const SobrePage = () => {
         <Skills>
           <Text>👩‍💻Herramientas que utilizo en mi día a día👩‍💻</Text>
 
-          <Grid>
+          <GridSkills>
             <Skill text={"Docs"} icon={docs} />
             <Skill text={"Sheet"} icon={sheet} />
             <Skill text={"Slides"} icon={slides} />
@@ -232,7 +245,13 @@ const SobrePage = () => {
             <Skill text={"Calendar"} icon={calendar} />
             <Skill text={"Calendly"} icon={calendly} />
             <Skill text={"Windows"} icon={window} />
-          </Grid>
+          </GridSkills>
+
+          <Task>
+            <Text>
+              📒Tareas que puedo realizar para ayudarte en tu trabajo📒
+            </Text>
+          </Task>
         </Skills>
       </About>
     </Layout>
