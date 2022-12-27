@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import SEO from '../components/SEO';
+import SEO from "../components/SEO"
 
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -39,7 +39,8 @@ const PostLink = styled(Link)`
   &:hover {
     .gatsby-image-wrapper {
       transform: scale(1.05);
-      box-shadow: 0 3px 10px -3px rgba(80, 80, 80, 0.3), 0 1px 5px -2px rgba(80, 80, 80, 0.19);
+      box-shadow: 0 3px 10px -3px rgba(80, 80, 80, 0.3),
+        0 1px 5px -2px rgba(80, 80, 80, 0.19);
     }
   }
 `
@@ -58,7 +59,8 @@ const Image = styled.div`
     border-radius: 6px;
     overflow: hidden;
     transition: all 300ms ease-in-out;
-    box-shadow: 0 5px 10px -3px rgba(80, 80, 80, 0.2), 0 1px 5px -2px rgba(80, 80, 80, 0.1);
+    box-shadow: 0 5px 10px -3px rgba(80, 80, 80, 0.2),
+      0 1px 5px -2px rgba(80, 80, 80, 0.1);
   }
 `
 
@@ -127,16 +129,19 @@ const Description = styled.span`
   }
 `
 
-const Portfolio = ({data}) => {
+const Portfolio = ({ data }) => {
   return (
     <Layout>
-      <SEO
-        title="Conheça meu Porfolio"
-      />
-      <Title>Meu Portfolio:</Title>
+      <SEO title="Conoce mi Portafolio" />
+      <Title>Mi Portafolio</Title>
       <PostList>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <PostLink type={"portfolio"} key={node.id} to={node.fields.slug} title={node.frontmatter.title}>
+          <PostLink
+            type={"portfolio"}
+            key={node.id}
+            to={node.fields.slug}
+            title={node.frontmatter.title}
+          >
             <Left>
               <Image>
                 <Img
@@ -156,31 +161,35 @@ const Portfolio = ({data}) => {
   )
 }
 
-export const pageQuery = graphql`{
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {categories: {eq: "Portfolio"}}}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          id: title
-          title
-          categories
-          image {
-            childImageSharp {
-              fluid(maxWidth: 360) {
-                ...GatsbyImageSharpFluid
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { categories: { eq: "Portfolio" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            id: title
+            title
+            categories
+            image {
+              childImageSharp {
+                fluid(maxWidth: 360) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
+            date(locale: "pt-br", formatString: "DD MMM")
+            description
           }
-          date(locale: "pt-br", formatString: "DD MMM")
-          description
-        }
-        fields {
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
   }
-}
 `
-export default Portfolio;
+export default Portfolio

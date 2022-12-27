@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import SEO from "../components/SEO"
+import Portfolio from "./portfolio"
 
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -176,7 +177,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Emilibeth Villasmil - Asistente Virtual" />
-      <Title>Ultimas Publicações:</Title>
+      <Title>Proyectos</Title>
       <PostList>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <PostLink
@@ -204,9 +205,10 @@ const IndexPage = ({ data }) => {
           </PostLink>
         ))}
       </PostList>
-      <Link className={"btn ver-artigos"} to={"artigos"}>
+
+      {/* <Link className={"btn ver-artigos"} to={"artigos"}>
         Todos Artigos
-      </Link>
+      </Link> */}
     </Layout>
   )
 }
@@ -215,7 +217,7 @@ export const pageQuery = graphql`
   {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 10
+      filter: { frontmatter: { categories: { eq: "Portfolio" } } }
     ) {
       edges {
         node {
@@ -231,7 +233,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "pt-br", formatString: "DD MMM")
             description
           }
           fields {
