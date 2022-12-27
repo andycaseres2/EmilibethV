@@ -187,7 +187,7 @@ const Task = styled.div`
   width: 100%;
   margin: 0;
   color: #fff;
-  padding-top: 20px;
+  padding-top: 30px;
 `
 
 const SobrePage = () => {
