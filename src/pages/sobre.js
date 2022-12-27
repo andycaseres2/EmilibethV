@@ -142,6 +142,7 @@ const Text = styled.p`
 
   @media (prefers-color-scheme: dark) {
     color: var(--Nord06);
+    font-size: 18px;
   }
 
   @media (prefers-color-scheme: light) {
@@ -176,6 +177,15 @@ const GridSkills = styled.div`
   width: 100%;
   margin: 0;
   color: #fff;
+
+  @media only screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0px 30px;
+    padding-left: 10px;
+    width: 38%;
+    font-size: 11px;
+  }
 `
 const Task = styled.div`
   display: flex;
