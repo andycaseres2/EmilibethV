@@ -21,6 +21,7 @@ import window from "../../static/images/skills/window.png"
 import SEO from "../components/SEO"
 import Social from "../components/Social"
 import { Skill } from "../components/Skill"
+import ListTask from "../components/ListTask"
 
 const About = styled.div``
 
@@ -177,8 +178,8 @@ const GridSkills = styled.div`
   color: #fff;
 `
 const Task = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-direction: column;
   color: var(--Nord03);
   position: relative;
   font-weight: 700;
@@ -202,6 +203,50 @@ const SobrePage = () => {
       }
     }
   `)
+
+  const tasks = [
+    {
+      id: 1,
+      name: "Administración de correo electrónico",
+    },
+    {
+      id: 2,
+      name: "Gestión de agenda y calendario",
+    },
+    {
+      id: 3,
+      name: "Atención a redes sociales respondiendo mensajes y dudas",
+    },
+    {
+      id: 4,
+      name: "Contabilidad básica",
+    },
+    {
+      id: 5,
+      name: "Asistencia personal",
+    },
+    {
+      id: 6,
+      name: "Coordinación y planificación de viajes",
+    },
+    {
+      id: 7,
+      name: "Investigación",
+    },
+    {
+      id: 8,
+      name: "Transcripción a texto de videos y audios",
+    },
+    {
+      id: 9,
+      name: "Coordinación de presupuestos y cotizaciones",
+    },
+    {
+      id: 10,
+      name: "Relleno de formularios",
+    },
+  ]
+
   return (
     <Layout>
       <SEO title="Sobre" />
@@ -213,7 +258,9 @@ const SobrePage = () => {
           <Right>
             <Title>
               <Small>Hola, mi nombre es</Small>Emilibeth Villasmil
-              <Text>👩‍💻Asistente Virtual👩‍💻</Text>
+              <Text>
+                <span>👩‍💻</span>Asistente Virtual<span>👩‍💻</span>
+              </Text>
             </Title>
             <Text>
               Soy una persona confiable, responsable, honesta, organizada, con
@@ -228,7 +275,10 @@ const SobrePage = () => {
 
         <Social />
         <Skills>
-          <Text>👩‍💻Herramientas que utilizo en mi día a día👩‍💻</Text>
+          <Text>
+            <span>👩‍💻</span>Herramientas que utilizo en mi día a día
+            <span>👩‍💻</span>
+          </Text>
 
           <GridSkills>
             <Skill text={"Docs"} icon={docs} />
@@ -249,8 +299,10 @@ const SobrePage = () => {
 
           <Task>
             <Text>
-              📒Tareas que puedo realizar para ayudarte en tu trabajo📒
+              <span>📒</span>Tareas que puedo realizar para ayudarte en tu
+              trabajo<span>📒</span>
             </Text>
+            <ListTask tasks={tasks} />
           </Task>
         </Skills>
       </About>

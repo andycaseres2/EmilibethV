@@ -378,7 +378,7 @@ const Social = () => (
       {/* Twitter */}
       <ItemSocial>
         <Link
-          href="https://www.twitter.com/rychillie/"
+          href="https://twitter.com/emilibethvill?s=21&t=2UgQN4lpNsXjEEb2GRxDMQ"
           target="_blank"
           rel="noopener noreferrer"
           className={"twitter"}

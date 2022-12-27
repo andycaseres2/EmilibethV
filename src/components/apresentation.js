@@ -230,15 +230,17 @@ export default () => {
           <Right>
             <Title>
               <Small>Hola, mi nombre es</Small>Emilibeth Villasmil
-              <Text>👩‍💻Asistente Virtual👩‍💻</Text>
+              <Text>
+                <span>👩‍💻</span>Asistente Virtual<span>👩‍💻</span>
+              </Text>
             </Title>
             <Text>
               Soy una apasionada de la administración y de todo lo que implique
               organizar. Me destaco por ser una persona dinámica y perseverante,
-              así que tengo la plena certeza de que podemos construir avances 🚀
-              para tu negocio, reduciéndote tiempo. Me encanta 🗣conversar y
-              escuchar 👥a las personas, por lo que podría ofrecerte una
-              atención al cliente de calidad.
+              así que tengo la plena certeza de que podemos construir avances
+              <span>🚀</span> para tu negocio, reduciéndote tiempo. Me encanta
+              🗣conversar y escuchar <span>👥</span>a las personas, por lo que
+              podría ofrecerte una atención al cliente de calidad.
               <StyledLink to={"/sobre"} alt={"Sobre"}>
                 Conóceme
               </StyledLink>{" "}
