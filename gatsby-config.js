@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: "Rychillie",
-    description: `Brazilian Front-End Developer`,
-    author: `@rychillie`,
-    siteUrl: `https://rychillie.net`,
+    title: "Emilibeth",
+    description: `Asistente Virtual`,
+    author: `@AndyCaseres`,
+    siteUrl: `https://andy-w-caseres-f.vercel.app/`,
     titleTemplate: "%s",
-    url: "https://rychillie.net",
+    url: "https://andy-w-caseres-f.vercel.app/",
     image: "/images/profile.png",
-    twitterUsername: "@rychillie",
+    twitterUsername: "@AndyWuillian",
   },
   plugins: [
     {
@@ -107,10 +107,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rychillie`,
+        name: `Emilibeth`,
         lang: `pt-br`,
-        description: "Desenvolvedor FrontEnd",
-        short_name: `Rychillie`,
+        description: "Asistente Virtual",
+        short_name: `Emilibeth`,
         start_url: `/`,
         background_color: `#2E3440`,
         theme_color: `#2E3440`,

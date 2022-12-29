@@ -128,7 +128,7 @@ const Copy = styled.p`
     color: var(--Nord00);
   }
 `
-const ButtonUp = styled(Link)`
+const ButtonUp = styled.button`
   position: absolute;
   right: 20px;
   top: 20px;
@@ -139,6 +139,11 @@ const ButtonUp = styled(Link)`
     transform: scale(1.1);
   }
 `
+
+const ScrollTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
+}
+
 const Footer = () => (
   <Ft>
     <Container>
@@ -168,7 +173,7 @@ const Footer = () => (
         <Copy>© 2022 - EmilibethV.</Copy>
       </Nav>
 
-      <ButtonUp to={"/"}>
+      <ButtonUp onClick={ScrollTop}>
         <img
           src={arrowUp}
           alt="Arrow Up"
